@@ -1,0 +1,209 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<script src="js/big.js"></script>
+<link type="text/css" href="css/big.css" rel="stylesheet" />
+<link type="text/css" href="css/talk.css" rel="stylesheet" />
+</head>
+<body>
+<!-- 1 -->
+  <div data-bodyclass="intro">
+    <h1 class="center">1, 2, 3 SVG!</h1>
+    <h4><em>A brief intro to Scalable Vector Graphics</em></h4>
+    <br />
+    <svg id="ello-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g>
+        <text x="50" y="30" 
+          font-family="Helvetica" 
+          font-size="40" stroke="#000" fill="#000">
+        ello.co/virtualandy
+        </text>
+        <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM25.77 18.425c-1.15 4.46-5.167 7.575-9.77 7.575s-8.62-3.115-9.77-7.576c-0.195-0.755 0.261-1.528 1.016-1.723 0.116-0.030 0.235-0.045 0.354-0.045 0.644 0 1.207 0.437 1.368 1.062 0.829 3.211 3.72 5.453 7.032 5.453s6.203-2.242 7.031-5.453c0.161-0.625 0.723-1.062 1.368-1.062 0.119 0 0.239 0.015 0.355 0.046 0.365 0.094 0.673 0.326 0.865 0.651s0.245 0.706 0.151 1.072z" fill="#000"></path>
+      </g>
+    </svg>
+    <p>
+      giveaway - 2 subscriptions to <a href="//frontendmasters.com">Frontend Masters</a>
+    </p>
+  </div>
+<!-- 2 -->
+  <div>
+    <p>Sources:</p>
+    <ul>
+      <li>
+        <a class="no-highlight" href="https://twitter.com/SaraSoueidan">Sara Soueidan</a>
+        <ul>
+          <li><a href="http://sarasoueidan.com/blog/svg-coordinate-systems/">Understanding SVG Coordinate Systems</a></li>
+          <li><a href="http://slides.com/sarasoueidan/styling-animating-svgs-with-css--2#/12">Styling SVGs with CSS</a> <a href="https://www.youtube.com/watch?v=lf7L8X6ZBu8">(video @ CSSConf.eu)</a></li>
+        </ul>
+      </li>
+      <li>
+        Jen Simmons, Doug Schepers
+        <ul>
+          <li><a href="http://5by5.tv/webahead/67">Web Ahead Podcast - SVG</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="no-highlight" href="https://css-tricks.com">Chris Coyier</a>
+        <ul>
+          <li>
+            <a href="https://css-tricks.com/mega-list-svg-information/">A Compendium of SVG Info</a>
+          </li>
+          <li>
+            <a href="https://css-tricks.com/icon-fonts-vs-svg/">Icon Fonts vs SVG</a>
+          </li>
+          <li>
+            <a href="http://ianfeather.co.uk/ten-reasons-we-switched-from-an-icon-font-to-svg/">10 Reasons to Switch (Lonely Planet)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="no-highlight">Dmitry Baranovskiy</a>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=SeLOt_BRAqc">You Don't Know SVG</a>
+          </li>
+          <li><a href="http://raphaeljs.com">RaphaelJS</a></li>
+        </ul>
+      <li>
+        <a class="no-highlight">Scott Murray</a>
+        <ul>
+          <li><a href="http://alignedleft.com/tutorials/d3/an-svg-primer">SVG Primer</a></li>
+          <li><a href="http://alignedleft.com/work/d3-book">Interactive Data Visualization for the Web</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://pinboard.in/u:virtualandy/t:svg/">pinboard svg tags</a>
+      </li>
+    </ul>
+  </div>
+<!-- 3 -->
+  <div><img src="img/svg-caniuse.png"></div>
+<!-- 4 -->  
+  <div><img src="img/svg-size-comparison.png"></div>
+<!-- 5 -->
+  <div>
+    <code>&lt;img src="html.svg"&gt;</code>
+    <img id="svg-as-img" src="img/svg/html5-logo.svg">
+  </div>
+<!-- 6 -->
+  <div>
+    <code>&lt;svg width="32" height="32" viewBox="0 0 32 32"&gt;
+    &lt;path d="M10 10 H 90 V 90 H 10 L 10 10"/&gt;</code>
+    <p>
+      <svg id="simple-box" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+        <path d="M10 10 H 90 V 90 H 10 L 10 10" fill="#f00" stroke="#00f"></path>
+      </svg>
+    </p>
+    <p>
+  </div>
+<!-- 6.1 -->
+  <div><img src="img/svg-paths-larissa.png" />
+    <a href="http://roadtolarissa.com/blog/2015/02/22/svg-path-strings/">SVG Path Strings Interactive Tutorial</a>
+  </div>
+<!-- 7 -->
+  <div>
+    <code>viewBox="0 0 100 100"</code>
+    <pre>viewBox = &lt;min-x&gt; &lt;min-y&gt; &lt;width&gt; &lt;height&gt;</pre>
+  </div>
+<!-- 8 -->
+  <div>
+    <a href="http://sarasoueidan.com/blog/svg-coordinate-systems/">coordinate systems</a>
+    <pre>&lt;svg width="100" height="100" viewBox="0 0 32 32"&gt;</pre>
+    <p>It's (not that) complicated</p>
+    <p class="svg-container">
+    <svg class="sample-scale" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 32 32">
+    <path d="M8.071 13.954l-4.579-7.931c2.932-3.671 7.445-6.023 12.508-6.023 5.857 0 10.978 3.148 13.767 7.844h-13.055c-0.235-0.020-0.472-0.031-0.711-0.031-3.809 0-7.018 2.614-7.929 6.142zM21.728 10.156h9.171c0.711 1.81 1.101 3.781 1.101 5.844 0 8.776-7.066 15.9-15.818 15.998l6.544-11.334c0.921-1.324 1.462-2.932 1.462-4.664 0-2.287-0.943-4.357-2.459-5.844zM10.188 16c0-3.205 2.607-5.813 5.813-5.813s5.813 2.607 5.813 5.813c0 3.205-2.608 5.813-5.813 5.813s-5.813-2.608-5.813-5.813zM18.193 23.889l-4.581 7.934c-7.704-1.153-13.613-7.797-13.613-15.822 0-2.851 0.746-5.526 2.053-7.845l6.532 11.314c1.308 2.785 4.14 4.718 7.415 4.718 0.759 0 1.495-0.104 2.193-0.299z" fill="#444444"></path>
+    </svg>
+    </p>
+    <a href="http://sarasoueidan.com/demos/interactive-svg-coordinate-system/index.html">Sara's Awesome Interactive Demo</a>
+  </div>
+<!-- 9 -->
+  <div>
+    <h2>data url</h2>
+    <code>&lt;p class="icon-html5-logo"&gt;</code>
+    <p class="icon-html5-logo"></p>
+    <code>background-image: url('data:image/svg+xml;...viewBox%3D%220%200%20512%20512%22%</code>
+  </div>
+<!-- 10 -->
+  <div>
+    <h3>Helpers</h3>
+    <p><a target="_blank" href="http://snapsvg.io/">snap.svg</a></p>
+    <p><a target="_blank" href="http://snapsvg.io/demos/#mascot">mascot demo</a></p>
+    <p><a target="_blank" href="https://jonobr1.github.io/two.js/">two.js</a></p>
+  </div>
+<!-- 11 -->
+  <div>
+    Animate!
+    <a target="_blank" href="/velocity.html">Velocity.js</a>
+  </div>
+<!-- 11.1 -->
+  <div>
+    Animate!
+    <p>
+      <a href="http://jakearchibald.com/2013/animated-line-drawing-svg/">animated line drawing</a>
+    </p>
+  </div>
+  <div>
+    <p>
+      <a target="_blank" href="/linepath.html">line path animations</a>
+    </p>
+  </div>
+<!-- 12 -->  
+  <div>
+    <h2>Icons, etc:</h2>
+    <a href="https://icomoon.io/">IcoMoon</a>
+    <a href="http://fontello.com/">Fontello</a>
+  </div>
+<!-- 12.1 -->
+  <div>
+    <h3>fallbacks</h3>
+    <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a>
+  </div>
+<!-- 13 -->
+  <div>
+    build tools
+    <a href="http://www.grunticon.com/">grunticon</a>
+    <a href="https://github.com/jkphl/gulp-svg-sprite">gulp-svg-sprite</a>
+  </div>
+<!-- 14 -->
+  <div>
+    drag and drop
+    <a target="_blank" href="http://www.grumpicon.com/">grumpicon</a>
+  </div>
+<!-- 15 -->
+  <div>
+    <h3>color swap (w/o css)</h3>
+    <p class="icon-html5-logo-alt"></p>
+    <code>background-image: url('data:image/svg+xml;...viewBox%3D%220%200%20512%20512%22%</code>
+  </div>
+<!-- 15.1 -->
+  <div>
+    <h3>shared css</h3>
+    <img src="img/svg-css.png" />
+  </div>
+<!-- 16 -->
+  <div>
+    <p>
+      <a href="http://www.responsiveicons.co.uk/">responsive icons</a>
+    </p>
+    <iframe id="responsive-icons" src="http://www.responsiveicons.co.uk/"></iframe>
+  </div>
+<!-- 16.1 -->
+  <div>
+    <h2>inspiration</h2>
+    <p>
+      <a href="//bl.ocks.org/mbostock">bl.ocks.org/mbostock</a>
+      <a href="http://codepen.io/tag/svg/">codepen (svg tags)</a>
+      <a href="http://tympanus.net/codrops/tag/svg/">codrops (svg)</a>
+    </p>
+  </div>
+<!-- 17 -->
+  <div>
+    <h2>thank you!</h2>
+  </div>
+</body>
+
+
+
+
+
+
+

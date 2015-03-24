@@ -1,33 +1,34 @@
 window.onload = function() {
     var s = document.getElementsByTagName('div'), ti;
     if (!s) return;
-    big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
+    var big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
+    window.big = big;
+    console.log("now we are big!")
+    function resize() {
+        var w = window.innerWidth, h = window.innerHeight, e = s[big.current];
+        e.style.fontSize = h + 'px';
+        for (var i = h - 2; e.offsetWidth > w || e.offsetHeight > h; i -= 2) {
+            e.style.fontSize = i + 'px';
+        }
+        e.style.marginTop = ((h - e.offsetHeight) / 2) + 'px';
+    }
     function go(n) {
         big.current = n;
-        var i = 1e3, e = s[n], t = parseInt(e.dataset.timeToNext || 0, 10);
+        var e = s[n], t = parseInt(e.dataset.timeToNext || 0, 10);
         document.body.className = e.dataset.bodyclass || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
-        e.style.fontSize = i + 'px';
-        var notes = e.getElementsByTagName('notes');
-        if (notes.length) console.log('%c'+n+': '+notes[0].innerHTML.trim(), 'padding:5px;font-family:serif;font-size:14px;line-height:150%;');
         if (e.firstChild && e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url("' + e.firstChild.src + '")';
-            document.body.style.height = window.innerHeight + 'px';
             e.firstChild.style.display = 'none';
             if ('classList' in e) e.classList.add('imageText');
         } else {
-            document.body.style.height = 'auto';
             document.body.style.backgroundImage = '';
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
         if (ti !== undefined) window.clearInterval(ti);
         if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
-        while ((e.offsetWidth > window.innerWidth ||
-            e.offsetHeight > window.innerHeight) && i >= 0) {
-            e.style.fontSize = (i -= 2) + 'px';
-        }
-        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
+        resize();
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
     }
@@ -40,8 +41,8 @@ window.onload = function() {
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
-        document.ontouchend = function(e) {
-            var x1 = e.changedTouches[0].pageX;
+        document.ontouchend = function(e2) {
+            var x1 = e2.changedTouches[0].pageX;
             if (x1 - x0 < 0) fwd();
             if (x1 - x0 > 0) rev();
         };
@@ -55,5 +56,6 @@ window.onload = function() {
         var c = parse_hash();
         if (c !== big.current) go(c);
     };
+    window.onresize = resize;
     go(big.current);
 };
