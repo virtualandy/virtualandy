@@ -57,7 +57,7 @@ class: center
 ## _Raster_
 
 .center.attribution[
-  Created by Christopher T. Howlett from the Noun Project
+  [Boxing](https://thenounproject.com/term/boxing/88690/) created by Christopher T. Howlett from [the Noun Project](http://thenounproject.com/)
 ]
 
 ???
@@ -95,6 +95,9 @@ class: center
 ## Raster
 
 ![http://www.manep-nccr.ch/img/photo/challenges/nanotubes/crt.jpg](http://www.manep-nccr.ch/img/photo/challenges/nanotubes/crt.jpg)
+.attribution[
+  [http://www.manep-nccr.ch/img/photo/challenges/nanotubes/crt.jpg](http://www.manep-nccr.ch/img/photo/challenges/nanotubes/crt.jpg)
+]
 
 [Wikipedia - Images of Cathode Ray Tubes](https://commons.wikimedia.org/wiki/Cathode_ray_tube)
 
@@ -109,27 +112,127 @@ _It originates from the raster scan of cathode ray tube (CRT) video monitors, wh
 ]
 
 .right-column[
-  - Text / XML
-  - **Vectors**
+- Text / XML
+
+- **Vectors**
 
   .constrain[
     ![http://slidedeck.io/una/slides-bdconf](http://una.im/slides-bdconf/img/SVG.svg)
   ]
+  .attribution[
+    [Una Kravets | @una - Primer on performance](http://slidedeck.io/una/slides-bdconf)
+  ]
 
-  #### [Scott Murray - SVG Primer](http://alignedleft.com/tutorials/d3/an-svg-primer)
+  ### Examples / Demos
+  - [Scott Murray - SVG Primer](http://alignedleft.com/tutorials/d3/an-svg-primer)
+  - [Interactive Data Visualization for the Web](http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#SVG_3)
+  - [SVG Path Strings](http://roadtolarissa.com/blog/2015/02/22/svg-path-strings/)
 
-  #### [SVG Path Strings - http://roadtolarissa.com/blog/2015/02/22/svg-path-strings/]
+]
+
+???
+
+Make sure to hit all the different types and tags from the primer.
+Recommend that second link (book) as it is a good read on all things Web tech.
+---
+.left-column[
+  ## SVG: The Basics
+]
+
+.right-column[
+- Small (and can be compressed)
+- Usable!
+
+  .constrain[
+    ![caniuse table for svg](img/caniuse-svg.png)
+  ]
+  .attribution[
+    [caniuse - svg](http://caniuse.com/#feat=svg)
+  ]
+
+  ### References
+  [Sara Soueidan - Styling and animating SVGs](http://slides.com/sarasoueidan/styling-animating-svgs-with-css--2#/)
+  [video@CSSconf EU 2014](https://www.youtube.com/watch?v=lf7L8X6ZBu8)
+
+  [CSS-Tricks - Using SVG](https://css-tricks.com/using-svg/)
 
 ]
 
 ---
 
-SVG as IMG
+.left-column[
+  ## SVG as `<img>`
+]
+.right-column[
+    ```html
+      <p class='itriage-info'>
+        <img class='itriage-thumb' src='img/itriage-thumb.svg'>
+      </p>
+    ```
+  <p class='itriage-info'>
+    <img class='itriage-thumb-ex' src='img/itriage-thumb.svg'>
+  </p>
+]
 
 ---
 
-SVG as background image
-http://codepen.io/Tigt/post/optimizing-svgs-in-data-uris
+.left-column[
+  ## SVG as `<img>` via data URI
+]
+.right-column.break-word[
+    ```html
+      <img src='data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMY...'>
+    ```
+  <p class='itriage-info'>
+    <img class='itriage-thumb-ex' src='data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIg0KCSB3aWR0aD0iNTAiIGhlaWdodD0iNzUiIHZpZXdCb3g9IjAgMCAyMCAzNSIgZmlsbD0iI2QxMTQ2MyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTAuMSw5LjVsLTAuNiwwbDAtMi4zYzAuNCwwLjUsMC42LDEuMSwwLjYsMS41QzEwLjEsOSwxMC4xLDkuMiwxMC4xLDkuNXogTTQuMyw4LjljMCwwLjIsMCwwLjQsMCwwLjZsMC40LDANCglsMC0yLjFDNC41LDcuOCw0LjMsOC4zLDQuMyw4Ljl6IE0zLjUsOS41bC0wLjgsMFY4LjljMC0yLjYsMi00LjYsNC40LTQuNmMyLjUsMCw0LjUsMiw0LjUsNC41bDAsMC42bC0wLjgsMGwwLTAuNg0KCWMwLTEuMS0wLjQtMi0xLjEtMi43QzksNS41LDguMSw1LjEsNy4xLDUuMWMtMC43LDAtMS4zLDAuMi0xLjksMC42QzUuMiw1LjcsNC43LDYsNC42LDYuMkMzLjksNi45LDMuNSw3LjgsMy41LDguOVY5LjV6IE0xMy4xLDguOA0KCXYwLjd2MC4xYzAsMC0wLjEsMC0wLjEtMC4xYy0wLjEsMC0wLjEtMC4xLTAuMi0wLjFjLTAuMSwwLTAuMy0wLjEtMC41LTAuMWgtMC4xVjguOGMwLTEuNC0wLjYtMi43LTEuNS0zLjZDOS44LDQuMiw4LjUsMy43LDcuMiwzLjcNCgljLTEuNCwwLTIuNywwLjYtMy42LDEuNUMyLjcsNi4xLDIuMSw3LjQsMi4xLDguOHYwLjdIMmgwYy0wLjMsMC0wLjUsMC4xLTAuNywwLjFjMCwwLDAsMC0wLjEsMFY4LjhjMC0zLjMsMi42LTYsNS45LTYNCglDMTAuNCwyLjgsMTMuMSw1LjUsMTMuMSw4Ljh6IE04LjgsMTguMmwtMC40LDBjMC43LDAuNSwxLjUsMC44LDIuMywxYzAsMCwwLjEsMCwwLjEsMGMwLjIsMCwwLjQtMC4xLDAuNC0wLjQNCgljMC4xLTAuMi0wLjEtMC41LTAuMy0wLjVjLTAuNS0wLjEtMS0wLjMtMS41LTAuNmMwLDAsMCwwLDAsMEM5LjIsMTguMSw5LDE4LjIsOC44LDE4LjJ6IE0xMi4xLDE0LjNMMTIuMSwxNC4zbC0wLjUsMGMwLDAsMCwwLDAsMA0KCWMwLjIsMC4xLDAuNCwwLjMsMC43LDAuNGMwLjIsMC4xLDAuNCwwLDAuNS0wLjJjMC4xLTAuMiwwLjEtMC40LDAtMC41YzAsMC0wLjEsMC4xLTAuMSwwLjFDMTIuNiwxNC4zLDEyLjQsMTQuMywxMi4xLDE0LjN6DQoJIE0xMS40LDE3LjljMC4xLDAsMC4xLDAsMC4yLDBjMC4yLDAsMC4zLTAuMSwwLjQtMC4zYzAuMS0wLjIsMC0wLjUtMC4yLTAuNmMtMC45LTAuNC0xLjYtMC44LTIuMi0xLjJsMCwxLjENCglDMTAuMSwxNy4yLDEwLjcsMTcuNiwxMS40LDE3Ljl6IE05LjUsMTQuOGMwLjYsMC42LDEuNCwxLjEsMi41LDEuNWMwLjIsMC4xLDAuNSwwLDAuNS0wLjNjMC4xLTAuMiwwLTAuNS0wLjItMC42DQoJYy0wLjgtMC4zLTEuNS0wLjctMi0xLjFsLTAuOCwwTDkuNSwxNC44eiBNMS42LDE0LjJDMS41LDE0LjIsMS41LDE0LjIsMS42LDE0LjJjLTAuMiwwLjEtMC4yLDAuMi0wLjIsMC40YzAsMC4yLDAuMiwwLjMsMC40LDAuMw0KCWMwLDAsMC4xLDAsMC4xLDBjMC42LTAuMiwwLjktMC4zLDEuMy0wLjZsLTEsMEMxLjksMTQuMywxLjcsMTQuMywxLjYsMTQuMnogTTQuMiwxNC4zYy0wLjcsMC43LTEuNCwwLjktMiwxYy0wLjEsMC0wLjEsMC0wLjIsMA0KCWMtMC4yLDAuMS0wLjQsMC4zLTAuMywwLjVjMCwwLjIsMC4yLDAuNCwwLjQsMC40YzAsMCwwLjEsMCwwLjEsMGMwLjEsMCwwLjEsMCwwLjIsMEMzLDE2LjEsMy44LDE1LjksNC43LDE1bDAtMC43TDQuMiwxNC4zeg0KCSBNMi43LDE2LjhjLTAuMSwwLTAuMiwwLTAuMiwwLjFjLTAuMiwwLjEtMC40LDAuMy0wLjMsMC41YzAsMC4yLDAuMiwwLjQsMC40LDAuNGMwLDAsMC4xLDAsMC4xLDBjMC4xLDAsMC4yLDAsMC4yLTAuMQ0KCWMwLjUtMC4xLDEuMi0wLjMsMS45LTAuN2wwLTEuMUM0LDE2LjUsMy4zLDE2LjcsMi43LDE2Ljh6IE00LjksMTcuOGMwLDAsMC0wLjEtMC4xLTAuMWMtMC45LDAuNS0xLjYsMC43LTEuNiwwLjcNCgljLTAuMiwwLTAuNCwwLjMtMC4zLDAuNWMwLDAuMiwwLjIsMC40LDAuNCwwLjRjMCwwLDAsMCwwLjEsMGMwLjEsMCwxLjEtMC4yLDIuMi0xbC0wLjEsMEM1LjIsMTguMiw1LDE4LjEsNC45LDE3Ljh6IE03LjgsMjAuMQ0KCUw3LjgsMjAuMUM3LjYsMjAsNy40LDIwLDcuMiwyMHYwYzAsMCwwLDAsMCwwaDBoMGMwLDAsMCwwLDAsMGMtMC4yLDAtMC40LDAtMC43LDAuMWMtMC4yLDAuMS0wLjIsMC4zLTAuMiwwLjQNCgljMCwwLjEsMC4yLDAuMiwwLjMsMC4yYzAsMCwwLjEsMCwwLjEsMGMwLjEtMC4xLDAuMy0wLjEsMC41LTAuMWMwLDAsMCwwLDAsMGMwLDAsMCwwLDAsMGMwLjIsMCwwLjMsMCwwLjUsMC4xDQoJYzAuMiwwLjEsMC4zLDAsMC40LTAuMkM4LjEsMjAuNCw4LDIwLjIsNy44LDIwLjF6IE02LjgsMTguM2MtMC44LDAuNS0yLjQsMS4yLTIuNCwxLjJjLTAuMiwwLjEtMC4zLDAuMy0wLjIsMC42DQoJYzAuMSwwLjIsMC4zLDAuMywwLjUsMC4yYzAuMSwwLDEuNS0wLjYsMi4zLTEuMmMwLjEsMCwwLjEsMC4xLDAuMiwwLjFjMC41LDAuMywxLjIsMC45LDIuMSwxLjFjMCwwLDAuMSwwLDAuMSwwDQoJYzAuMiwwLDAuNC0wLjEsMC40LTAuM2MwLTAuMi0wLjEtMC41LTAuMy0wLjVjLTAuOC0wLjItMS40LTAuNy0xLjgtMWMtMC4xLTAuMS0wLjItMC4yLTAuMy0wLjJDNy4yLDE4LjIsNywxOC4yLDYuOCwxOC4zeiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIuMSwxMS4ydi0xLjFsLTAuMiwwYy0wLjMsMC0wLjQsMC4yLTAuNCwwLjRsMCwxLjFjMC4xLDAsMC4xLDAuMSwwLjIsMC4xQzEuOSwxMS42LDIuMSwxMS40LDIuMSwxMS4yeiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyLjIsMTAuNWMwLDAuMiwwLjIsMC40LDAuNSwwLjRjMC4xLDAsMC4xLDAsMC4yLDBsMC0wLjRjMC0wLjEtMC4xLTAuNC0wLjQtMC40bC0wLjIsMHYwVjEwLjV6Ii8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTAuNSwxMi4zYy0wLjItMC41LTAuNC0xLjEtMC40LTIuMmwtMC45LDBjMC4xLDEuMiwwLjIsMiwwLjUsMi42YzAuMiwwLjUsMC42LDAuOCwxLDFsMS42LDANCgljMC4xLDAsMC4xLDAsMC4xLDBjLTAuMS0wLjEtMC4yLTAuMS0wLjQtMC4yQzExLjMsMTMuMSwxMC44LDEyLjgsMTAuNSwxMi4zeiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTcuMyw2LjdDNy4zLDYuNyw3LjMsNi43LDcuMyw2LjdjMC42LDAsMSwwLjQsMS4zLDAuNkM4LjcsNy42LDguOSw3LjcsOSw3LjlsMC0xLjRjMC0wLjEsMC0wLjItMC4xLTAuMw0KCUM4LjcsNi4yLDguNiw2LjIsOC42LDYuMkg1LjdjLTAuMSwwLTAuNCwwLjEtMC40LDAuNGwwLDEuN2MwLjEtMC4zLDAuMy0wLjYsMC41LTAuOEM2LjIsNyw2LjgsNi43LDcuMyw2Ljd6Ii8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNi43LDE1LjJjLTAuNS0wLjgtMC44LTEuOC0xLjEtMi44Yy0wLjItMC43LTAuMy0xLjUtMC40LTIuM2wtMC4yLDBsLTAuNywwYzAuMSwxLjMsMC4zLDIuNSwwLjcsMy42aDBsMC4yLDANCglsMCwwLjJsMCwwLjRjMC4yLDAuNSwwLjQsMSwwLjcsMS40YzAuNSwwLjgsMSwxLjQsMS42LDJoMC45YzAuMSwwLDAuMy0wLjEsMC4zLTAuMkM4LDE3LDcuMywxNi4yLDYuNywxNS4yeiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTUuMywxMy43bC0wLjIsMGgwYzAuMSwwLjIsMC4xLDAuNCwwLjIsMC42bDAtMC40TDUuMywxMy43eiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTguNiwxMC4zYzAtMC4xLDAtMC4zLDAtMC40YzAtMC40LDAtMC45LTAuMi0xLjRDOC4xLDcuNyw3LjYsNy42LDcuMiw3LjZjLTAuMywwLTAuNiwwLjEtMC44LDAuMw0KCUM2LjEsOC4zLDUuOSw4LjksNiw5LjhjMC4xLDIuMSwwLjUsMy42LDEuMiw0LjhjMC40LDAuNywxLDEuMywxLjYsMS44YzAsMCwwLjEsMC4xLDAuMSwwLjFsMC0xLjJjLTAuNC0wLjQtMC43LTAuOC0xLTEuMg0KCUM3LjMsMTMsNywxMS43LDYuOSw5LjdDNi44LDguOSw3LDguNiw3LDguNWMwLDAsMC4xLTAuMSwwLjItMC4xYzAuMSwwLDAuMiwwLDAuMywwLjNjMC4xLDAuMywwLjEsMC43LDAuMSwxLjFjMCwwLjIsMCwwLjMsMCwwLjUNCgljMC4xLDEuNSwwLjQsMi44LDEuMywzLjhsMC0wLjNsMC0wLjJsMC4yLDBsMC42LDBjLTAuMS0wLjEtMC4yLTAuMi0wLjMtMC40QzguOSwxMi42LDguNywxMS43LDguNiwxMC4zeiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQuNCwxMi44Yy0wLjItMC4yLTAuNC0wLjItMC42LDBjLTAuNywwLjYtMSwwLjgtMS41LDFsMS43LDBjMC4xLTAuMSwwLjItMC4yLDAuNC0wLjMNCglDNC41LDEzLjIsNC41LDEzLDQuNCwxMi44eiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTUuNywxNi4yYzAuMi0wLjIsMC4yLTAuNSwwLTAuNmMtMC4xLTAuMS0wLjItMC4xLTAuNC0wLjF2MC4xbDAsMUM1LjQsMTYuNSw1LjYsMTYuNCw1LjcsMTYuMnoiLz4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02LjQsMTdDNi4zLDE2LjgsNiwxNi44LDUuOCwxN2MtMC4yLDAuMS0wLjMsMC4zLTAuNSwwLjRjMCwwLDAsMCwwLDAuMWMwLjEsMC4yLDAuMiwwLjMsMC40LDAuM2gwLjYNCgljMCwwLDAsMCwwLDBDNi42LDE3LjUsNi42LDE3LjIsNi40LDE3eiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMuNSwxMS4zdi0xLjJsLTAuOCwwdjEuMmMwLDAuNy0wLjcsMS0xLjIsMS4xbDAsMC44QzIuOCwxMy4xLDMuNSwxMi4yLDMuNSwxMS4zeiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTExLjYsMTAuNGwwLTAuM2wtMC44LDBsMCwwLjRjMC4yLDEuNiwxLjEsMi4yLDIsMi40bDAtMC45QzEyLjMsMTEuOSwxMS43LDExLjIsMTEuNiwxMC40eiIvPg0KPC9zdmc+'>
+  </p>
+
+  #### Proceed with caution
+  [CSS-Tricks - Probably don't base64 SVGs](https://css-tricks.com/probably-dont-base64-svg/)
+  [Codepen - Optimizing SVGs in Data URIs](http://codepen.io/Tigt/post/optimizing-svgs-in-data-uris)
+]
+
+???
+
+That second link shows use of an SVG in SASS, a la
+    ```
+      background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><path fill="#804D35" d="M35 254.6l9.7 28.8 211 1.7 12-34L35 255"/><path fill="#2F2B33" d="M40 288c1.3 1.2 221 0 221 0s5.3-6.4-50.2-10c-34.4.8-55...">)
+    ```
+which is sort of interesting.
+
+---
+
+.left-column[
+  ## Background image
+
+]
+.right-column.break-word[
+  ```html
+    <a href='//itriagehealth.com' class='logo'>iTriage</a>
+  ```
+  ```css
+    .logo {
+      width: 75px; height: 100px;
+      background: url('img/itriage-thumb.svg');
+      background-size: cover;
+    }
+  ```
+  <a href='//itriagehealth.com' class='itriage-logo'>iTriage</a>
+]
+
+???
+
+Example lifted from https://css-tricks.com/using-svg/
+
+---
+class: center
+
+## CSS vs SVG
+
+???
+
+Check in, see how everyone is feeling.
+Check to see how many folks are comfortable with more css/xml/svg stuff.
 
 ---
 
@@ -156,7 +259,7 @@ Styling
 http://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/
 
 
-boxing by Christopher T. Howlett from the Noun Project
+
 
 Snowman by Dillon Arloff from the Noun Project
  - flash and other vector graphics
@@ -179,7 +282,7 @@ http://www.smashingmagazine.com/2012/04/a-closer-look-at-font-rendering/
 
 ---
 
-# <text>
+# `<text>`
 
 http://codepen.io/chriscoyier/pen/DKcad
 

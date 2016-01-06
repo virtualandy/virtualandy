@@ -10,6 +10,10 @@ body {
   text-align: center;
 }
 
+.remark-slide-content {
+  padding: 1em 2em 1em 2em;
+}
+
 .remark-code, .remark-inline-code {
   font-family: 'Ubuntu Mono';
   font-size: 2.5rem;
@@ -20,6 +24,7 @@ body {
   width: 25%;
   height: 92%;
   float: left;
+  word-wrap: break-word;
 }
 .right-column {
   width: 70%;
@@ -41,9 +46,9 @@ body {
   line-height: 125px;
   vertical-align: top;
 }
-.attribution {
-  font-size: 1.2rem;
-  color: #ddd;
+.attribution, .attribution a {
+  font-size: 1rem;
+  color: #ccc;
 }
 
 .fade a {
@@ -52,4 +57,21 @@ body {
 
 .constrain img {
   max-width: 30rem;
+}
+
+.itriage-thumb-ex {
+  width: 15rem;
+}
+
+.break-word pre {
+  word-wrap: break-word;
+}
+
+.itriage-logo {
+  display: block;
+  width: 75px;
+  height: 100px;
+  background: url('../img/itriage-thumb.svg');
+  background-size: cover;
+  text-indent: -9999px;
 }
