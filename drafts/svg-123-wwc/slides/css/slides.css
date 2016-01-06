@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+#ello-svg {
+  width: 22rem;
+  height: 3rem;
+  text-align: center;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Ubuntu Mono';
+  font-size: 2.5rem;
+  white-space: pre-line;
+}
+
+.left-column {
+  width: 25%;
+  height: 92%;
+  float: left;
+}
+.right-column {
+  width: 70%;
+  float: right;
+  padding-top: 1rem;
+}
+
+.itriage-info a {
+  line-height: 50px;
+  vertical-align: top;
+}
+
+#glove-left, #glove-right {
+  width: 100px;
+  height: 125px;
+}
+
+.vs {
+  line-height: 125px;
+  vertical-align: top;
+}
+.attribution {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.fade a {
+  background-color: rgba(150,150,150,0.75);
+}
+
+.constrain img {
+  max-width: 30rem;
+}

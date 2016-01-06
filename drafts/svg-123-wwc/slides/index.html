@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SVG 1, 2, 3 - Slides</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/slides.css">
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css"> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script> -->
+  </head>
+  <body>
+    <textarea id="source">
+class: center
+name: intro
+
+# SVG 1, 2, 3
+
+<svg id="ello-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <text x="40" y="25"
+      font-family="Raleway"
+      font-size="36" stroke="#000" fill="#000">
+      @virtualandy
+    </text>
+    <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM25.77 18.425c-1.15 4.46-5.167 7.575-9.77 7.575s-8.62-3.115-9.77-7.576c-0.195-0.755 0.261-1.528 1.016-1.723 0.116-0.030 0.235-0.045 0.354-0.045 0.644 0 1.207 0.437 1.368 1.062 0.829 3.211 3.72 5.453 7.032 5.453s6.203-2.242 7.031-5.453c0.161-0.625 0.723-1.062 1.368-1.062 0.119 0 0.239 0.015 0.355 0.046 0.365 0.094 0.673 0.326 0.865 0.651s0.245 0.706 0.151 1.072z" fill="#000"></path>
+  </g>
+</svg>
+
+<p class='itriage-info'>
+  <img class='itriage-thumb' src='img/itriage-thumb.svg'>
+  <a href="mailto:aennamorato@itriagehealth.com">aennamorato@itriagehealth.com</a>
+</p>
+
+## giveaway
+**5** prepaid subscriptions to [Frontend Masters](//frontendmasters.com)
+
+???
+
+Winners can [email me](mailto:virtualandy@gmail.com)
+
+---
+class: center
+
+## Scalable _Vector_ Graphics
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" id="glove-left">
+  <path d="M91.354 34.433c-3.077-5.128-8.04-8.37-14.346-9.374-5.304-.845-8.89-.584-11.205-.065-4.67-3.806-11.932-5.137-19.773-3.49-5.79 1.222-10.045 4.923-13.462 7.897-3.716 3.232-5.93 5.037-8.38 4.398-8.07-2.124-12.852-2.016-15.958.378C6.084 35.83 5 38.465 5 42.014v19.413c0 5.005.99 8.076 3.206 9.963 3.018 2.555 7.11 1.887 11.85 1.108 4.688-.762 10.525-1.71 17.1 0l1.83.48c12.798 3.37 23.6 6.213 32.255 6.213 10.175 0 17.39-3.93 21.38-15.564 2.73-7.952 4.038-20.367-1.266-29.193zm-4.407 27.245c-5.368 15.624-17.388 13.14-46.433 5.497l-1.834-.48c-3.288-.862-6.394-1.167-9.265-1.167-3.95 0-7.45.574-10.332 1.05-3 .49-6.107.995-6.992.233-.327-.274-1.09-1.36-1.09-5.385v-19.41c0-1.59.3-2.626.892-3.084.774-.603 3.212-1.315 10.772.672 5.614 1.494 9.8-2.154 13.842-5.673C39.7 31.15 43 28.276 47.272 27.376c8.392-1.773 13.872.832 16.046 3.592 1.09 1.38 2.092 3.64.697 6.586-1.278 2.713-2.825 2.825-8.386 1.814-4.953-.905-11.74-2.145-16.533 4.425l4.84 3.54c2.468-3.355 5.65-2.965 10.614-2.06 4.842.88 11.458 2.08 14.892-5.145 1.518-3.206 1.66-6.56.475-9.608 1.524-.056 3.557.053 6.142.463 4.57.73 7.987 2.93 10.155 6.54 3.967 6.6 3.223 16.89.732 24.153z"/>
+  <path d="M23.59 46.53l-2.79-1.103-1.42 3.6-1.422-3.6-2.79 1.102 2.6 6.582-2.6 6.585 2.79 1.102 1.42-3.603 1.68 4.253 2.79-1.102-2.857-7.236M33.94 46.53l-2.79-1.103-1.425 3.606-1.424-3.606-2.788 1.102 2.6 6.586-2.6 6.58 2.79 1.103 1.42-3.6 1.68 4.25 2.79-1.102-2.855-7.23"/>
+</svg>
+<span class="vs">vs</span>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 100 125" id="glove-right">
+  <g transform="rotate(180 50 60)">
+    <path d="M91.354 34.433c-3.077-5.128-8.04-8.37-14.346-9.374-5.304-.845-8.89-.584-11.205-.065-4.67-3.806-11.932-5.137-19.773-3.49-5.79 1.222-10.045 4.923-13.462 7.897-3.716 3.232-5.93 5.037-8.38 4.398-8.07-2.124-12.852-2.016-15.958.378C6.084 35.83 5 38.465 5 42.014v19.413c0 5.005.99 8.076 3.206 9.963 3.018 2.555 7.11 1.887 11.85 1.108 4.688-.762 10.525-1.71 17.1 0l1.83.48c12.798 3.37 23.6 6.213 32.255 6.213 10.175 0 17.39-3.93 21.38-15.564 2.73-7.952 4.038-20.367-1.266-29.193zm-4.407 27.245c-5.368 15.624-17.388 13.14-46.433 5.497l-1.834-.48c-3.288-.862-6.394-1.167-9.265-1.167-3.95 0-7.45.574-10.332 1.05-3 .49-6.107.995-6.992.233-.327-.274-1.09-1.36-1.09-5.385v-19.41c0-1.59.3-2.626.892-3.084.774-.603 3.212-1.315 10.772.672 5.614 1.494 9.8-2.154 13.842-5.673C39.7 31.15 43 28.276 47.272 27.376c8.392-1.773 13.872.832 16.046 3.592 1.09 1.38 2.092 3.64.697 6.586-1.278 2.713-2.825 2.825-8.386 1.814-4.953-.905-11.74-2.145-16.533 4.425l4.84 3.54c2.468-3.355 5.65-2.965 10.614-2.06 4.842.88 11.458 2.08 14.892-5.145 1.518-3.206 1.66-6.56.475-9.608 1.524-.056 3.557.053 6.142.463 4.57.73 7.987 2.93 10.155 6.54 3.967 6.6 3.223 16.89.732 24.153z"/>
+    <path d="M23.59 46.53l-2.79-1.103-1.42 3.6-1.422-3.6-2.79 1.102 2.6 6.582-2.6 6.585 2.79 1.102 1.42-3.603 1.68 4.253 2.79-1.102-2.857-7.236M33.94 46.53l-2.79-1.103-1.425 3.606-1.424-3.606-2.788 1.102 2.6 6.586-2.6 6.58 2.79 1.103 1.42-3.6 1.68 4.25 2.79-1.102-2.855-7.23"/>
+  </g>
+</svg>
+
+## _Raster_
+
+.center.attribution[
+  Created by Christopher T. Howlett from the Noun Project
+]
+
+???
+
+What is important about the term vector
+And the typical alt, raster
+
+For that, we need a semi-off-topic discussion about a household product
+---
+
+```html
+  X-rays may be produced when electrons, accelerated by high voltage, strike an obstacle while traveling in a vacuum...
+```
+### fda.gov/Radiation-EmittingProducts
+
+???
+
+Name this product you probably grew up with
+
+---
+class: center
+background-image: url(img/crt.jpg)
+
+```html
+X-rays may be produced when electrons, accelerated by high voltage, strike an obstacle while traveling in a vacuum, as in a TV containing a cathode ray tube (CRT). Since many of the components in television sets operate at thousands of volts, there is the potential for x-ray generation.
+```
+.fade[
+  [FDA - Radiation Emitting TVs](http://www.fda.gov/Radiation-EmittingProducts/ResourcesforYouRadiationEmittingProducts/ucm252764.htm)
+]
+
+---
+
+class: center
+
+## Raster
+
+![http://www.manep-nccr.ch/img/photo/challenges/nanotubes/crt.jpg](http://www.manep-nccr.ch/img/photo/challenges/nanotubes/crt.jpg)
+
+[Wikipedia - Images of Cathode Ray Tubes](https://commons.wikimedia.org/wiki/Cathode_ray_tube)
+
+???
+
+the term raster:
+_It originates from the raster scan of cathode ray tube (CRT) video monitors, which paint the image line by line by magnetically steering a focused electron beam.[5]_
+
+---
+.left-column[
+  ## SVG: The Basics
+]
+
+.right-column[
+  - Text / XML
+  - **Vectors**
+
+  .constrain[
+    ![http://slidedeck.io/una/slides-bdconf](http://una.im/slides-bdconf/img/SVG.svg)
+  ]
+
+  #### [Scott Murray - SVG Primer](http://alignedleft.com/tutorials/d3/an-svg-primer)
+
+  #### [SVG Path Strings - http://roadtolarissa.com/blog/2015/02/22/svg-path-strings/]
+
+]
+
+---
+
+SVG as IMG
+
+---
+
+SVG as background image
+http://codepen.io/Tigt/post/optimizing-svgs-in-data-uris
+
+---
+
+Inline SVG
+
+Simple hover example
+http://codepen.io/luiscarvalho/pen/hJFrx
+
+---
+
+Fallbacks and polyfills
+
+https://github.com/jonathantneal/svg4everybody/blob/master/README.md
+
+http://callmenick.com/post/svg-fallback-with-png
+
+---
+
+#### [Amelia Bellamy-Royds - How to scale SVG](https://css-tricks.com/scale-svg/)
+
+
+Styling
+
+http://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/
+
+
+boxing by Christopher T. Howlett from the Noun Project
+
+Snowman by Dillon Arloff from the Noun Project
+ - flash and other vector graphics
+
+1. Introduction
+2. Deep-dive
+3. ...
+
+---
+
+
+
+---
+
+# SVGs turned icons
+http://codepen.io/LukyVj/pen/MYaKpY
+
+http://blog.typekit.com/2010/10/05/type-rendering-on-the-web/
+http://www.smashingmagazine.com/2012/04/a-closer-look-at-font-rendering/
+
+---
+
+# <text>
+
+http://codepen.io/chriscoyier/pen/DKcad
+
+    </textarea>
+    <script src="http://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+      // extract the embedded styling from ansi spans
+      // $('code.terminal > span.hljs-ansi').replaceWith(function(i, x) {
+        // return x.replace(/<(\/?(\w+).*?)>/g, '<$1>')
+      // });
+    </script>
+  </body>
+</html>
