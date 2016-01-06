@@ -67,10 +67,11 @@ And the typical alt, raster
 
 For that, we need a semi-off-topic discussion about a household product
 ---
-
-```html
+.break-word[
+  ```html
   X-rays may be produced when electrons, accelerated by high voltage, strike an obstacle while traveling in a vacuum...
-```
+  ```
+]
 ### fda.gov/Radiation-EmittingProducts
 
 ???
@@ -81,9 +82,11 @@ Name this product you probably grew up with
 class: center
 background-image: url(img/crt.jpg)
 
+.break-word[
 ```html
 X-rays may be produced when electrons, accelerated by high voltage, strike an obstacle while traveling in a vacuum, as in a TV containing a cathode ray tube (CRT). Since many of the components in television sets operate at thousands of volts, there is the potential for x-ray generation.
 ```
+]
 .fade[
   [FDA - Radiation Emitting TVs](http://www.fda.gov/Radiation-EmittingProducts/ResourcesforYouRadiationEmittingProducts/ucm252764.htm)
 ]
@@ -124,16 +127,31 @@ _It originates from the raster scan of cathode ray tube (CRT) video monitors, wh
   ]
 
   ### Examples / Demos
-  - [Scott Murray - SVG Primer](http://alignedleft.com/tutorials/d3/an-svg-primer)
-  - [Interactive Data Visualization for the Web](http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#SVG_3)
   - [SVG Path Strings](http://roadtolarissa.com/blog/2015/02/22/svg-path-strings/)
-
+  - [Scott Murray - SVG Primer](http://alignedleft.com/tutorials/d3/an-svg-primer)
 ]
 
 ???
 
 Make sure to hit all the different types and tags from the primer.
 Recommend that second link (book) as it is a good read on all things Web tech.
+
+---
+.left-column[
+  ## SVG: The Basics
+]
+
+.right-column[
+
+  ### More Examples / Demos
+  - [Interactive Data Visualization for the Web](http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#SVG_3)
+  - [Sata Soueidan - Structuring, Grouping, Referencing in SVG](https://sarasoueidan.com/blog/structuring-grouping-referencing-in-svg/)
+]
+
+???
+
+Make sure to hit all the different types and tags from the primer.
+Recommend that second link (book) a
 ---
 .left-column[
   ## SVG: The Basics
@@ -159,15 +177,70 @@ Recommend that second link (book) as it is a good read on all things Web tech.
 ]
 
 ---
+.left-column[
+  ## SVG: Basics++
+]
+.right-column[
+  **Scaling and Coordinate Systems**
+
+  ### Guides and References
+  [Amelia Bellamy-Royds - How to scale SVG](https://css-tricks.com/scale-svg/)
+
+  [Sara Soueidan - SVG Coordinate Systems](http://sarasoueidan.com/blog/svg-coordinate-systems/)
+
+  ### Demo
+  [Sara Soueidan - Interactive CoordSys Demo](http://sarasoueidan.com/demos/interactive-svg-coordinate-system/index.html)
+]
+
+???
+
+Getting nice scaling from SVGs is one of the key reasons it we
+would want to use it. But, it's not completely simple.
+
+#### SVG Canvas
+the space or area where the content is drawn
+canvas is infinite; it is rendered on the screen relative to a finite region known as the viewport. Areas of the SVG that lie beyond the boundaries of the viewport are clipped off and not visible
+
+#### Viewport
+think of it as a window through which you can see a particular scene
+just as a web page can be any size, it can be wider than the viewports width and longer that the viewport (overflow: hidden)
+specify the size of the viewport using the width and height attributes on the outermost SVG element
+
+#### The Key
+If the user coord system you choose via viewBox has the same aspect ratio
+(height:width) as the viewport, it will stretch to fill the viewport area.
+If it does not, you can use preserveAspectRatio attribute to specify whether or not the entire system will be visible inside the viewport or not. And you can use it to specify how it is positioned inside the
+
+Sara’s point - visualize it like Google maps. You can zoom in to a specified area,
+that area will be visible scaled up, inside the viewport of the browser.
+However, you know that the rest of the map is still there, but it’s not visible because it extends beyond the viewport.
+---
+
+.left-column[
+  ## SVG: Basics++
+]
+.right-column[
+  **Responsiveness**
+
+  ### Tutorial
+  [Sara Soueidan/codrops - Making SVGs Responsive with CSS](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
+]
+
+???
+
+We're going to see more examples of this later on.
+There is lots of flexibility in terms of styling and responsiveness with SVGs, though.
+
+---
 
 .left-column[
   ## SVG as `<img>`
 ]
 .right-column[
     ```html
-      <p class='itriage-info'>
-        <img class='itriage-thumb' src='img/itriage-thumb.svg'>
-      </p>
+    <p class='itriage-info'>
+      <img class='itriage-thumb' src='img/itriage-thumb.svg'>
+    </p>
     ```
   <p class='itriage-info'>
     <img class='itriage-thumb-ex' src='img/itriage-thumb.svg'>
@@ -189,6 +262,7 @@ Recommend that second link (book) as it is a good read on all things Web tech.
 
   #### Proceed with caution
   [CSS-Tricks - Probably don't base64 SVGs](https://css-tricks.com/probably-dont-base64-svg/)
+
   [Codepen - Optimizing SVGs in Data URIs](http://codepen.io/Tigt/post/optimizing-svgs-in-data-uris)
 ]
 
@@ -212,9 +286,9 @@ which is sort of interesting.
   ```
   ```css
     .logo {
-      width: 75px; height: 100px;
-      background: url('img/itriage-thumb.svg');
-      background-size: cover;
+        width: 75px; height: 100px;
+        background: url('img/itriage-thumb.svg');
+        background-size: cover;
     }
   ```
   <a href='//itriagehealth.com' class='itriage-logo'>iTriage</a>
@@ -227,7 +301,7 @@ Example lifted from https://css-tricks.com/using-svg/
 ---
 class: center
 
-## [CSS vs SVG](http://codepen.io/mariosmaselli/pen/raqKQm)
+## Segue: [CSS vs SVG](http://codepen.io/mariosmaselli/pen/raqKQm)
 
 .attribution[
   [Rachel Nabors - Web Animation Weekly](http://us1.campaign-archive2.com/?u=0a8f219cf8284562f91a26ee9&id=d424ece21c&e=6189d28536)
@@ -239,23 +313,215 @@ Check in, see how everyone is feeling.
 Check to see how many folks are comfortable with more css/xml/svg stuff.
 
 ---
+class: center
 
-Inline SVG
+## Segue: Text and Icon fonts
 
-Simple hover example
-http://codepen.io/luiscarvalho/pen/hJFrx
+### [Codepen - Material Design Icons](http://codepen.io/LukyVj/pen/MYaKpY)
 
----
+???
 
-Fallbacks and polyfills
-
-https://github.com/jonathantneal/svg4everybody/blob/master/README.md
-
-http://callmenick.com/post/svg-fallback-with-png
+New itriage uses this approach
+Live code if you dare
 
 ---
 
-#### [Amelia Bellamy-Royds - How to scale SVG](https://css-tricks.com/scale-svg/)
+## Inline SVG
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="100px" height="125px" viewBox="0 0 20 25" fill="#d11463"
+  id="itriage-logo-inline">
+<path class="st0 finger" d="M10.1,9.5l-0.6,0l0-2.3c0.4,0.5,0.6,1.1,0.6,1.5C10.1,9,10.1,9.2,10.1,9.5z M4.3,8.9c0,0.2,0,0.4,0,0.6l0.4,0
+    l0-2.1C4.5,7.8,4.3,8.3,4.3,8.9z M3.5,9.5l-0.8,0V8.9c0-2.6,2-4.6,4.4-4.6c2.5,0,4.5,2,4.5,4.5l0,0.6l-0.8,0l0-0.6
+    c0-1.1-0.4-2-1.1-2.7C9,5.5,8.1,5.1,7.1,5.1c-0.7,0-1.3,0.2-1.9,0.6C5.2,5.7,4.7,6,4.6,6.2C3.9,6.9,3.5,7.8,3.5,8.9V9.5z M13.1,8.8
+    v0.7v0.1c0,0-0.1,0-0.1-0.1c-0.1,0-0.1-0.1-0.2-0.1c-0.1,0-0.3-0.1-0.5-0.1h-0.1V8.8c0-1.4-0.6-2.7-1.5-3.6C9.8,4.2,8.5,3.7,7.2,3.7
+    c-1.4,0-2.7,0.6-3.6,1.5C2.7,6.1,2.1,7.4,2.1,8.8v0.7H2h0c-0.3,0-0.5,0.1-0.7,0.1c0,0,0,0-0.1,0V8.8c0-3.3,2.6-6,5.9-6
+    C10.4,2.8,13.1,5.5,13.1,8.8z M8.8,18.2l-0.4,0c0.7,0.5,1.5,0.8,2.3,1c0,0,0.1,0,0.1,0c0.2,0,0.4-0.1,0.4-0.4
+    c0.1-0.2-0.1-0.5-0.3-0.5c-0.5-0.1-1-0.3-1.5-0.6c0,0,0,0,0,0C9.2,18.1,9,18.2,8.8,18.2z M12.1,14.3L12.1,14.3l-0.5,0c0,0,0,0,0,0
+    c0.2,0.1,0.4,0.3,0.7,0.4c0.2,0.1,0.4,0,0.5-0.2c0.1-0.2,0.1-0.4,0-0.5c0,0-0.1,0.1-0.1,0.1C12.6,14.3,12.4,14.3,12.1,14.3z
+     M11.4,17.9c0.1,0,0.1,0,0.2,0c0.2,0,0.3-0.1,0.4-0.3c0.1-0.2,0-0.5-0.2-0.6c-0.9-0.4-1.6-0.8-2.2-1.2l0,1.1
+    C10.1,17.2,10.7,17.6,11.4,17.9z M9.5,14.8c0.6,0.6,1.4,1.1,2.5,1.5c0.2,0.1,0.5,0,0.5-0.3c0.1-0.2,0-0.5-0.2-0.6
+    c-0.8-0.3-1.5-0.7-2-1.1l-0.8,0L9.5,14.8z M1.6,14.2C1.5,14.2,1.5,14.2,1.6,14.2c-0.2,0.1-0.2,0.2-0.2,0.4c0,0.2,0.2,0.3,0.4,0.3
+    c0,0,0.1,0,0.1,0c0.6-0.2,0.9-0.3,1.3-0.6l-1,0C1.9,14.3,1.7,14.3,1.6,14.2z M4.2,14.3c-0.7,0.7-1.4,0.9-2,1c-0.1,0-0.1,0-0.2,0
+    c-0.2,0.1-0.4,0.3-0.3,0.5c0,0.2,0.2,0.4,0.4,0.4c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.2,0C3,16.1,3.8,15.9,4.7,15l0-0.7L4.2,14.3z
+     M2.7,16.8c-0.1,0-0.2,0-0.2,0.1c-0.2,0.1-0.4,0.3-0.3,0.5c0,0.2,0.2,0.4,0.4,0.4c0,0,0.1,0,0.1,0c0.1,0,0.2,0,0.2-0.1
+    c0.5-0.1,1.2-0.3,1.9-0.7l0-1.1C4,16.5,3.3,16.7,2.7,16.8z M4.9,17.8c0,0,0-0.1-0.1-0.1c-0.9,0.5-1.6,0.7-1.6,0.7
+    c-0.2,0-0.4,0.3-0.3,0.5c0,0.2,0.2,0.4,0.4,0.4c0,0,0,0,0.1,0c0.1,0,1.1-0.2,2.2-1l-0.1,0C5.2,18.2,5,18.1,4.9,17.8z M7.8,20.1
+    L7.8,20.1C7.6,20,7.4,20,7.2,20v0c0,0,0,0,0,0h0h0c0,0,0,0,0,0c-0.2,0-0.4,0-0.7,0.1c-0.2,0.1-0.2,0.3-0.2,0.4
+    c0,0.1,0.2,0.2,0.3,0.2c0,0,0.1,0,0.1,0c0.1-0.1,0.3-0.1,0.5-0.1c0,0,0,0,0,0c0,0,0,0,0,0c0.2,0,0.3,0,0.5,0.1
+    c0.2,0.1,0.3,0,0.4-0.2C8.1,20.4,8,20.2,7.8,20.1z M6.8,18.3c-0.8,0.5-2.4,1.2-2.4,1.2c-0.2,0.1-0.3,0.3-0.2,0.6
+    c0.1,0.2,0.3,0.3,0.5,0.2c0.1,0,1.5-0.6,2.3-1.2c0.1,0,0.1,0.1,0.2,0.1c0.5,0.3,1.2,0.9,2.1,1.1c0,0,0.1,0,0.1,0
+    c0.2,0,0.4-0.1,0.4-0.3c0-0.2-0.1-0.5-0.3-0.5c-0.8-0.2-1.4-0.7-1.8-1c-0.1-0.1-0.2-0.2-0.3-0.2C7.2,18.2,7,18.2,6.8,18.3z"></path>
+<path class="st0 plus" d="M2.1,11.2v-1.1l-0.2,0c-0.3,0-0.4,0.2-0.4,0.4l0,1.1c0.1,0,0.1,0.1,0.2,0.1C1.9,11.6,2.1,11.4,2.1,11.2z"></path>
+<path class="st0 plus" d="M12.2,10.5c0,0.2,0.2,0.4,0.5,0.4c0.1,0,0.1,0,0.2,0l0-0.4c0-0.1-0.1-0.4-0.4-0.4l-0.2,0v0V10.5z"></path>
+<path class="st0 plus" d="M10.5,12.3c-0.2-0.5-0.4-1.1-0.4-2.2l-0.9,0c0.1,1.2,0.2,2,0.5,2.6c0.2,0.5,0.6,0.8,1,1l1.6,0
+    c0.1,0,0.1,0,0.1,0c-0.1-0.1-0.2-0.1-0.4-0.2C11.3,13.1,10.8,12.8,10.5,12.3z"></path>
+<path class="st0 plus" d="M7.3,6.7C7.3,6.7,7.3,6.7,7.3,6.7c0.6,0,1,0.4,1.3,0.6C8.7,7.6,8.9,7.7,9,7.9l0-1.4c0-0.1,0-0.2-0.1-0.3
+    C8.7,6.2,8.6,6.2,8.6,6.2H5.7c-0.1,0-0.4,0.1-0.4,0.4l0,1.7c0.1-0.3,0.3-0.6,0.5-0.8C6.2,7,6.8,6.7,7.3,6.7z"></path>
+<path class="st0 plus" d="M6.7,15.2c-0.5-0.8-0.8-1.8-1.1-2.8c-0.2-0.7-0.3-1.5-0.4-2.3l-0.2,0l-0.7,0c0.1,1.3,0.3,2.5,0.7,3.6h0l0.2,0
+    l0,0.2l0,0.4c0.2,0.5,0.4,1,0.7,1.4c0.5,0.8,1,1.4,1.6,2h0.9c0.1,0,0.3-0.1,0.3-0.2C8,17,7.3,16.2,6.7,15.2z"></path>
+<path class="st0 plus" d="M5.3,13.7l-0.2,0h0c0.1,0.2,0.1,0.4,0.2,0.6l0-0.4L5.3,13.7z"></path>
+<path class="st0 plus" d="M8.6,10.3c0-0.1,0-0.3,0-0.4c0-0.4,0-0.9-0.2-1.4C8.1,7.7,7.6,7.6,7.2,7.6c-0.3,0-0.6,0.1-0.8,0.3
+    C6.1,8.3,5.9,8.9,6,9.8c0.1,2.1,0.5,3.6,1.2,4.8c0.4,0.7,1,1.3,1.6,1.8c0,0,0.1,0.1,0.1,0.1l0-1.2c-0.4-0.4-0.7-0.8-1-1.2
+    C7.3,13,7,11.7,6.9,9.7C6.8,8.9,7,8.6,7,8.5c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.3,0.3c0.1,0.3,0.1,0.7,0.1,1.1c0,0.2,0,0.3,0,0.5
+    c0.1,1.5,0.4,2.8,1.3,3.8l0-0.3l0-0.2l0.2,0l0.6,0c-0.1-0.1-0.2-0.2-0.3-0.4C8.9,12.6,8.7,11.7,8.6,10.3z"></path>
+<path class="st0 plus" d="M4.4,12.8c-0.2-0.2-0.4-0.2-0.6,0c-0.7,0.6-1,0.8-1.5,1l1.7,0c0.1-0.1,0.2-0.2,0.4-0.3
+    C4.5,13.2,4.5,13,4.4,12.8z"></path>
+<path class="st0 plus" d="M5.7,16.2c0.2-0.2,0.2-0.5,0-0.6c-0.1-0.1-0.2-0.1-0.4-0.1v0.1l0,1C5.4,16.5,5.6,16.4,5.7,16.2z"></path>
+<path class="st0 plus" d="M6.4,17C6.3,16.8,6,16.8,5.8,17c-0.2,0.1-0.3,0.3-0.5,0.4c0,0,0,0,0,0.1c0.1,0.2,0.2,0.3,0.4,0.3h0.6
+    c0,0,0,0,0,0C6.6,17.5,6.6,17.2,6.4,17z"></path>
+<path class="st0 plus" d="M3.5,11.3v-1.2l-0.8,0v1.2c0,0.7-0.7,1-1.2,1.1l0,0.8C2.8,13.1,3.5,12.2,3.5,11.3z"></path>
+<path class="st0 plus" d="M11.6,10.4l0-0.3l-0.8,0l0,0.4c0.2,1.6,1.1,2.2,2,2.4l0-0.9C12.3,11.9,11.7,11.2,11.6,10.4z"></path>
+</svg>
+
+```html
+<svg width="150" height="225" viewBox="0 0 20 35" fill="#d11463">
+  <path class="st0 finger" d="M10.1,9.5l-0.6...">
+  <path class="st0 plus" d="M2.1,11.2v-1.1l-0.2,0...">
+</svg>
+```
+
+## Demo - [Simple hover example](http://codepen.io/luiscarvalho/pen/hJFrx)
+
+???
+
+Recommended way to do things going forward.
+Give example of Ello.
+https://ello.co/virtualandy/post/RhS-hnXJvjK7njnZDq3cJA
+
+---
+## Inline SVG
+
+### Responsive SVG Icons
+[Smashing Mag - Rethinking Responsive SVG](https://www.smashingmagazine.com/2014/03/rethinking-responsive-svg/)
+
+### Demo
+[Codepen - Smashing Mag](http://codepen.io/pukhalski/pen/uxIKB)
+
+???
+
+Can start to do really interesting things with SVGs once they are
+inline. Now they are part of the DOM.
+---
+## Inline SVG
+
+.break-word[
+  ```html
+    <svg>
+      <defs>
+        <g id="shape-icon-1">
+          <!-- all the paths and shapes -->
+        <g>
+        <g id="shape-icon-2">
+          <!-- all the paths and shapes -->
+        <g>
+      </defs>
+    </svg>
+  ```
+  ```html
+  <svg class="icon" viewBox="214.7 0 182.6 792">
+    <use xlink:href="#shape-icon-1" />
+  </svg>
+  ```
+]
+
+.attribution[
+  [SVG Symbol a good choice for icons](https://css-tricks.com/svg-symbol-good-choice-icons/)
+]
+
+???
+General idea is you define a bunch of symbols/shapes in one file.
+Then, use those where needed. Same idea as image spriting.
+---
+
+## SVGs as a Service
+
+[IcoMoon - builds an svg icon sprite or font](https://icomoon.io/app/#/select)
+
+[Iconic - $$$ service with more features](https://useiconic.com/)
+
+### References
+
+[Sara Souiedan - An overview of SVG Sprite Creation Techniques](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/)
+
+???
+
+You can use a service or pay for one to build these sprites for you.
+Benefits: a lot of options, well used, etc.
+---
+
+class: center
+
+## Live Code Warning!
+
+### Demo
+
+[Luke Whitehouse - SVG Icon Workflow](http://lukewhitehouse.co.uk/blog/svg-icon-workflow/)
+
+[CSS-Tricks - AJAXing SVG Sprites](https://css-tricks.com/ajaxing-svg-sprite/)
+---
+
+## Fallbacks and polyfills
+
+```js
+if (!Modernizr.svg) {
+  $("img[src$='.svg']")
+    .attr("src", fallback);
+}
+```
+
+### Resources
+[CSS Tricks - Complete Guide to SVG Fallbacks](https://css-tricks.com/a-complete-guide-to-svg-fallbacks/)
+
+[svg4everybody](https://github.com/jonathantneal/svg4everybody/blob/master/README.md)
+
+[SVG fallback with PNG](http://callmenick.com/post/svg-fallback-with-png)
+
+### Demo
+[Codepen - Amelia Bellamy-Royds](http://codepen.io/AmeliaBR/pen/emoPVL)
+
+---
+background-image: url(img/polygon-ps4.png)
+
+.fade[
+  ## Animations _aka fun with SVGs!_
+
+### Demo
+[Polygon PS4 Review](http://www.polygon.com/a/ps4-review)
+]
+
+---
+
+## Line Drawing Animation
+
+### Demo
+
+[Jake Archibald - Animated Line Drawing](https://jakearchibald.com/2013/animated-line-drawing-svg/)
+
+[codrops - SVG Drawing animation](http://tympanus.net/codrops/2013/12/30/svg-drawing-animation/)
+
+[Vivus - line drawing animation library](http://maxwellito.github.io/vivus/)
+
+???
+
+Note the start of the line. Increase it to 75 or so, then start with the offset.
+
+---
+
+Masks and Clips
+http://codepen.io/yoksel/pen/fsdbu
+
+with video
+http://codepen.io/SahAssar/pen/YPWxWX
+
+x-ray
+http://codepen.io/noeldelgado/pen/ByxQjL
+---
+
+
+
+---
+
 
 
 Styling
@@ -278,8 +544,7 @@ Snowman by Dillon Arloff from the Noun Project
 
 ---
 
-# SVGs turned icons
-http://codepen.io/LukyVj/pen/MYaKpY
+
 
 http://blog.typekit.com/2010/10/05/type-rendering-on-the-web/
 http://www.smashingmagazine.com/2012/04/a-closer-look-at-font-rendering/
